@@ -1,0 +1,11 @@
+<h1>Users</h1>
+<p id="notice"><%= notice %></p>
+<ul>
+  <% @users.each do |u| %>
+    <li>
+      <%= u.email %>
+      <%= link_to 'Edit User', edit_user_path(u.id) %>
+      <%= button_to "Destroy User", user_path(u.id), method: :delete %>
+    </li>
+  <% end %>
+</ul>
